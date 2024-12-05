@@ -1,0 +1,182 @@
+version: 2
+sources:
+
+    - name: client
+      schema: spectrum
+      tags: ['client']
+      tables:
+        - name: tiktok__ad_conversion
+          identifier: v_tiktok_ad_standard_conversion
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+
+        - name: tiktok__ad_region
+          identifier: v_tiktok_ad_geo_region_standard
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+    
+        - name: tiktok__ad
+          identifier: v_tiktok_ad_standard
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: sizmek__reporting_daily
+          identifier: v_upload_sizmek_reporting_daily
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: spotify__dai_span
+          identifier: v_upload_spotify_dai_span
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: google_ads__product
+          identifier: v_google_ads_api_product
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: google_ads__ad_group
+          identifier: v_google_ads_api_ad_group_tinuiti
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: google_ads__campaign
+          identifier: v_google_ads_api_campaign_tinuiti
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+    
+        - name: google_ads__product_conversion
+          identifier: v_google_ads_api_product_conversion_tinuiti
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: facebook__ad
+          identifier: v_facebook_ad_standard
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: facebook__ad_standard_conversion
+          identifier: v_facebook_ad_standard_conversion
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: facebook__ad_region
+          identifier: v_facebook_ad_region
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: bing__ad_performance
+          identifier: v_bing_ads_ad_performance_tinuiti
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: ga__session
+          identifier: v_ga_session
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: ga__ecommerce
+          identifier: v_ga_ecommerce_enhanced
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: bigquery__campaigns
+          identifier: v_bigquery_campaigns_report
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: bigquery__product
+          identifier: v_bigquery_product_ads_report
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: sprout__daily
+          identifier: v_upload_sprout_daily
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+    
+        - name: target__campaign
+          identifier: v_upload_target_campaign_level_daily
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: attentive__sms
+          identifier: v_upload_attentive_sms
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: ttd__reports
+          identifier: v_ttd_my_reports_basic_performance
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: custom__brand_pageviews
+          identifier: v_upload_custom_brand_pageviews
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: first_aid__campaign
+          identifier: v_upload_first_aid_campaign
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+    
+        - name: triplelift__reporting
+          identifier: v_upload_triplelift_reporting
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
+
+        - name: klaviyo__email
+          identifier: core_email_client
+          loaded_at_field: insert_date
+          freshness:
+            warn_after: {count: 1, period: day}
+            filter: "client = 'client'"
